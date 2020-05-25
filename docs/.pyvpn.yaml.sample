@@ -1,0 +1,29 @@
+vpn:
+ #username require for connecting to palo alto vpn
+ username: vaibhavjaiman
+ 
+ #encrypted password for connecting to paloalto vpn
+ password: wqjClMKwwrLDnsOLwqN7wqPCgw==
+ 
+ #Hostaddress for the vpn connection
+ host: vpn.paloaltonetworks.com
+ 
+ #List of gateway's based on connection preference
+ gateway:
+  - vpn01.paloaltonetworks.com
+  - vpn02.paloaltonetworks.com
+ 
+ #List of token based on preference
+ token:
+  push: 1
+  phone: 2
+  sms: 3
+
+# Unique Key to be used for encrypting and decrypting your password
+key: U3CBrfcJqPLYbXHf2h5B5xmyx0px1a
+
+#List of whitelisted websites that need to be routed via VPN gateway
+whitelists:
+ - paloaltonetworks.com
+ - github.com
+ - thebestlittle.com
