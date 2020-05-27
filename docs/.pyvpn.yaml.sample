@@ -23,7 +23,10 @@ vpn:
 key: U3CBrfcJqPLYbXHf2h5B5xmyx0px1a
 
 #List of whitelisted websites that need to be routed via VPN gateway
+#Supports addition of IP , hostname , IPaddress/subnet , Default subnet /32 will applies if None Found
 whitelists:
  - paloaltonetworks.com
  - github.com
  - thebestlittle.com
+ - 192.168.10.56
+ - 10.0.0.0/24
