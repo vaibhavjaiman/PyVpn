@@ -44,19 +44,22 @@ class PyVpn(Vpn):
         Future addition for other VPN gateway like Ciso , Juniper etc
         Once VPN is connected it's set to wait indefinetely till the method Stop is called.
         """
-        if self.provider == "paloalto":
-            session = PaloAlto(debug=self.debug,
-                               username=self.username,
-                               password=self.password,
-                               token=self.token,
-                               vpn_gateway=self.vpn_gateway,
-                               host=self.host)
-            session = session.connect
-            session.wait()
+        try:
+            if self.provider == "paloalto":
+                session = PaloAlto(debug=self.debug,
+                                   username=self.username,
+                                   password=self.password,
+                                   token=self.token,
+                                   vpn_gateway=self.vpn_gateway,
+                                   host=self.host)
+                session = session.connect
+                session.wait()
 
-        else:
-            # Pending dev. for other providers
-            pass
+            else:
+                # Pending dev. for other providers
+                pass
+        except KeyboardInterrupt:
+            self.stop
 
     @property
     def stop(self):
