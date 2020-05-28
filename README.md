@@ -19,7 +19,7 @@ These instructions will help you get a copy of the project and use it for your o
 
 ``` pip3 install PyVpn```
 
-Post module installation create configuration file `.pyvpn.yaml` in your home directory, Refer [pycpn.yaml.sample](https://github.com/vaibhavjaiman/PyVpn/tree/master/docs)
+Post module installation create configuration file `.pyvpn.yaml` in your home directory, Refer [pyvpn.yaml.sample](https://github.com/vaibhavjaiman/PyVpn/tree/master/docs)
 
 ### Prerequisites
 
@@ -73,14 +73,18 @@ crypt = Crypt()
 print(crypt.randomkey())
 
 ```
-   
+
 ## Author
 
 * **Vaibhav Jaiman** - (https://github.com/vaibhavjaiman)
 
 ## ReleaseHistory
 
-* 1.1
+*1.2
+  * ADD: `KeyboardInterrupt` Exception added
+  * ADD: Typo errors in `ReadME`
+
+*1.1
   * ADD: Moved to package based
   * ADD: support for encrypted password
   * ADD: `Setup.py` has been added
