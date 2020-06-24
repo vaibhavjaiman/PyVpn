@@ -30,7 +30,7 @@ Post module installation create configuration file `.pyvpn.yaml` in your home di
 
 #### Other Dependencies
    * [openconnect](https://formulae.brew.sh/formula/openconnect)
-   * [Python 3.8](https://www.python.org/downloads/release/python-381/)
+   * [Python 3.7+](https://www.python.org/downloads/release/python-381/)
 
 #### Example 1
    * For connecting to the vpn gateway, Default to Palo Alto Gateway
@@ -58,7 +58,7 @@ vpn.stop
 
 from PyVpn.source.crypt import Crypt
 crypt = Crypt()
-print(crypt.password.encrypt(password="Sample@123", key="U3CBrfcJqPLYbXHf2h5B5xmyx0px1a"))
+print(crypt.encrypt(password="Sample@123", key="U3CBrfcJqPLYbXHf2h5B5xmyx0px1a"))
 
 ```
 
@@ -89,7 +89,7 @@ print(crypt.randomkey())
   * ADD: support for encrypted password
   * ADD: `Setup.py` has been added
   
-* 1.0
+*1.0
   * ADD: Added palo alto support for MAC users
 
 ## Contact
